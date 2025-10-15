@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My GitHub Pages Site</title>
+  <meta name="description" content="Personal site hosted on GitHub Pages" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0b0f19; --card:#141a2a; --text:#e6e8ee; --muted:#9aa3b2; --accent:#7c9cff; }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,#0b0f19 0%, #0e1324 100%);color:var(--text);}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:rgba(11,15,25,.6);backdrop-filter:blur(8px);border-bottom:1px solid rgba(124,156,255,.15);}
+    .container{max-width:1000px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;letter-spacing:.4px}
+    .nav a{margin-left:16px;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;padding:64px 0 24px}
+    @media (max-width: 820px){.hero{grid-template-columns:1fr;}}
+    .title{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 12px}
+    .subtitle{color:var(--muted);font-size:clamp(14px,2.4vw,18px);margin:0 0 24px}
+    .cta{display:inline-flex;gap:10px;align-items:center;background:var(--accent);color:#0b0f19;border:0;border-radius:14px;padding:12px 16px;font-weight:700;box-shadow:0 8px 24px rgba(124,156,255,.35)}
+    .card{background:var(--card);border:1px solid rgba(124,156,255,.15);border-radius:18px;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width: 820px){.grid{grid-template-columns:1fr;}}
+    h2{margin:34px 0 14px;font-size:22px}
+    ul{padding-left:18px;margin:10px 0}
+    footer{color:var(--muted);border-top:1px solid rgba(124,156,255,.15);margin-top:36px;padding:18px 0}
+    .tag{display:inline-block;border:1px solid rgba(124,156,255,.25);padding:4px 10px;border-radius:999px;color:var(--muted);font-size:12px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+    .kicker{letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-size:12px}
+    .avatar{width:100%;height:100%;aspect-ratio:1/1;border-radius:14px;background:linear-gradient(135deg, rgba(124,156,255,.2), rgba(20,26,42,.6));display:flex;align-items:center;justify-content:center;font-weight:800}
+    .section{padding:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">MySite</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="kicker">Welcome</p>
+        <h1 class="title">Hi, I’m <span style="color:var(--accent)">Your Name</span> — I build useful things.</h1>
+        <p class="subtitle">This is a fast, minimal starter you can publish with GitHub Pages. Edit the text, add your projects, and you’re live.</p>
+        <a class="cta" href="#projects">View Projects →</a>
+      </div>
+      <div class="card">
+        <div class="avatar">Logo / Photo</div>
+        <div style="margin-top:12px;color:var(--muted);font-size:14px">Replace this box with your avatar or logo.</div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>Write a short bio here. Mention what you do, what you’re learning, and what you’re looking for. Keep it concise.</p>
+        <p class="tag">#javascript</p>
+        <p class="tag">#python</p>
+        <p class="tag">#qa-automation</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3 style="margin:0 0 8px">Project One</h3>
+          <p class="mono" style="font-size:14px">Short description of what it does and the tech used.</p>
+          <p><a href="#">Repo</a> · <a href="#">Live demo</a></p>
+        </article>
+        <article class="card">
+          <h3 style="margin:0 0 8px">Project Two</h3>
+          <p class="mono" style="font-size:14px">Short description of what it does and the tech used.</p>
+          <p><a href="#">Repo</a> · <a href="#">Live demo</a></p>
+        </article>
+        <article class="card">
+          <h3 style="margin:0 0 8px">Project Three</h3>
+          <p class="mono" style="font-size:14px">Short description of what it does and the tech used.</p>
+          <p><a href="#">Repo</a> · <a href="#">Live demo</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Best way to reach me: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Find me on <a href="#">LinkedIn</a> and <a href="#">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How this site works</h2>
+      <div class="card">
+        <ol>
+          <li>Create a public repository named <span class="mono">&lt;your-username&gt;.github.io</span>.</li>
+          <li>Add this <span class="mono">index.html</span> to the root of the repo and commit.</li>
+          <li>Visit <span class="mono">https://&lt;your-username&gt;.github.io</span> — it will load automatically.</li>
+        </ol>
+        <p>Want a project site instead? Create any repo, add this file, then enable <em>Settings → Pages → Deploy from a branch</em>, selecting the <span class="mono">main</span> branch and root folder.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Your Name · Built with GitHub Pages</div>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
