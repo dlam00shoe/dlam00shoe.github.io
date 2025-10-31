@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data:; font-src 'self' https:[...]
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; upgrade-insecure-requests; block-all-mixed-content;" />
   <meta name="referrer" content="no-referrer" />
 <title>My GitHub Pages Site</title>
   <meta name="description" content="Personal site hosted on GitHub Pages" />
@@ -14,7 +14,7 @@
     :root { --bg: #0b0f19; --card:#141a2a; --text:#e6e8ee; --muted:#9aa3b2; --accent:#7c9cff; }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,#0b0f19 0%, #0e1324 100%);color:var([...]
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,#0b0f19 0%, #0e1324 100%);color:var(--text);}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     header{position:sticky;top:0;background:rgba(11,15,25,.6);backdrop-filter:blur(8px);border-bottom:1px solid rgba(124,156,255,.15);}
@@ -26,7 +26,7 @@
     @media (max-width: 820px){.hero{grid-template-columns:1fr;}}
     .title{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 12px}
     .subtitle{color:var(--muted);font-size:clamp(14px,2.4vw,18px);margin:0 0 24px}
-    .cta{display:inline-flex;gap:10px;align-items:center;background:var(--accent);color:#0b0f19;border:0;border-radius:14px;padding:12px 16px;font-weight:700;box-shadow:0 8px 24px rgba(124,156,255,.35[...]
+    .cta{display:inline-flex;gap:10px;align-items:center;background:var(--accent);color:#0b0f19;border:0;border-radius:14px;padding:12px 16px;font-weight:700;box-shadow:0 8px 24px rgba(124,156,255,.35)}
     .card{background:var(--card);border:1px solid rgba(124,156,255,.15);border-radius:18px;padding:18px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     @media (max-width: 820px){.grid{grid-template-columns:1fr;}}
@@ -36,7 +36,7 @@
     .tag{display:inline-block;border:1px solid rgba(124,156,255,.25);padding:4px 10px;border-radius:999px;color:var(--muted);font-size:12px}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
     .kicker{letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-size:12px}
-    .avatar{width:100%;height:100%;aspect-ratio:1/1;border-radius:14px;background:linear-gradient(135deg, rgba(124,156,255,.2), rgba(20,26,42,.6));display:flex;align-items:center;justify-content:cente[...]
+    .avatar{width:100%;height:100%;aspect-ratio:1/1;border-radius:14px;background:linear-gradient(135deg, rgba(124,156,255,.2), rgba(20,26,42,.6));display:flex;align-items:center;justify-content:center;font-weight:800}
     .section{padding:16px 0}
   </style>
 </head>
@@ -75,7 +75,7 @@
     <section id="about" class="section">
       <h2>About</h2>
       <div class="card">
-        <p>Retrieval-Augmented Generation (RAG) is an AI architecture that enhances large language models (LLMs) by integrating external knowledge retrieval with text generation. Instead of relying so[...]
+        <p>Retrieval-Augmented Generation (RAG) is an AI architecture that enhances large language models (LLMs) by integrating external knowledge retrieval with text generation. Instead of relying solely on pre-trained data, RAG retrieves relevant information from external sources—such as databases, documents, or APIs—at query time. This retrieved context is then combined with the model’s internal knowledge to produce more accurate, grounded, and up-to-date responses.</p>
         <p class="tag">#javascript</p>
         <p class="tag">#python</p>
         <p class="tag">#qa-automation</p>
@@ -175,7 +175,7 @@
           <li>Add this <span class="mono">index.html</span> to the root of the repo and commit.</li>
           <li>Visit <span class="mono">https://&lt;your-username&gt;.github.io</span> — it will load automatically.</li>
         </ol>
-        <p>Want a project site instead? Create any repo, add this file, then enable <em>Settings → Pages → Deploy from a branch</em>, selecting the <span class="mono">main</span> branch and root f[...]
+        <p>Want a project site instead? Create any repo, add this file, then enable <em>Settings → Pages → Deploy from a branch</em>, selecting the <span class="mono">main</span> branch and root folder.</p>
       </div>
     </section>
   </main>
@@ -185,19 +185,5 @@
   </footer>
 
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <!-- Kommunicate Chatbot Widget -->
-  <script type="text/javascript">
-    (function(d, m){
-        var kommunicateSettings = {
-          "appId":"d9f5f1bbfbd039b44b0f85c61234bcf4",
-          "popupWidget":true,
-          "automaticChatOpenOnNavigation":true
-        };
-        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-        window.kommunicate = m; m._globals = kommunicateSettings;
-    })(document, window.kommunicate || {});
-  </script>
 </body>
 </html>
